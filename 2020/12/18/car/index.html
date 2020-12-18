@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    安装Code_server为ipad提高生产力 |  ShyoのBlog
+    hexo图片插件 |  ShyoのBlog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -39,7 +39,7 @@
   <div id="app">
     <main class="content on">
       <section class="outer">
-  <article id="post-安装Code_server为ipad提高生产力" class="article article-type-post" itemscope
+  <article id="post-car" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -47,7 +47,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  安装Code_server为ipad提高生产力
+  hexo图片插件
 </h1>
  
 
@@ -56,8 +56,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/12/09/%E5%AE%89%E8%A3%85Code_server%E4%B8%BAipad%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/" class="article-date">
-  <time datetime="2020-12-09T15:19:57.000Z" itemprop="datePublished">2020-12-09</time>
+      <a href="/2020/12/18/car/" class="article-date">
+  <time datetime="2020-12-18T02:39:28.000Z" itemprop="datePublished">2020-12-18</time>
 </a>
       
       
@@ -67,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">946</span>
+            <span class="post-count">519</span>
         </span>
     </span>
 
@@ -76,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">4 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -101,43 +101,29 @@
       
 
       
-      <p>在网上看到有人拿ipad来手写代码，发现是个很不错的东西，不用抱着笔记本来学习代码了，毕竟笔记本还是不能做到随时随地拿出来，论便携还是平板厉害（扯远了</p>
-<h3 id="1-下载code-server"><a href="#1-下载code-server" class="headerlink" title="1.下载code-server"></a>1.下载code-server</h3><p>Code-server的Github地址是:<a href="https://github.com/cdr/code-server" target="_blank" rel="noopener">https://github.com/cdr/code-server</a><br>点击Release可以看到以往版本的Code-server<br>这里我安装的是3.7.4版本<br>复制对应版本的压缩包的下载链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://github.com/cdr/code-server/releases/download/v3.7.4/code-server-3.7.4-linux-amd64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-解压缩这个安装包"><a href="#2-解压缩这个安装包" class="headerlink" title="2.解压缩这个安装包"></a>2.解压缩这个安装包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf code-server-3.7.4-linux-amd64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-打开code-server"><a href="#3-打开code-server" class="headerlink" title="3.打开code-server"></a>3.打开code-server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> code-server-3.7.4-linux-amd64</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">export</span> PASSWORD=<span class="string">"你的密码"</span> &amp;&amp; ./code-server --host 0.0.0.0 --port 8080</span><br><span class="line"><span class="comment">#host后面填0.0.0.0开放给公网以允许使用服务器地址访问，port后面跟的是打开的端口</span></span><br><span class="line"><span class="comment">#打开了端口之后要在服务器的防火墙中设置开放，不然会连不了</span></span><br></pre></td></tr></table></figure>
-<p>这个时候在每个设备的浏览器输入{服务器IP:code-server端口}，输入密码就能打开在自己服务器的VScode</p>
+      <p>感觉文章还是要有图片才方便讲述事情，所以这次来整hexo插入图片的插件</p>
+<h3 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h3><p>安装一个名字叫hexo-asset-image的图片路径转换插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="4-让服务器在后台运行code-server"><a href="#4-让服务器在后台运行code-server" class="headerlink" title="4.让服务器在后台运行code-server"></a>4.让服务器在后台运行code-server</h3><p>前面打开的code-server会在关闭ssh客户端时被一并关闭，想要随时随地打代码总不可能24小时开着ssh客户端吧。所以我们要去服务器的云控制台里输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./code-server &amp;</span><br></pre></td></tr></table></figure>
+<p>安装好之后在_config.yml配置文件中，修改成 post_asset_folder: true</p>
+<img src="/2020/12/18/car/3.png" class title="config">
 
-<h3 id="5-安装Python插件"><a href="#5-安装Python插件" class="headerlink" title="5.安装Python插件"></a>5.安装Python插件</h3><p>由于我等了很久的python在线安装都好像没反应，所以转.vsix方式离线安装vscode的python插件<br>在github找到python插件的.VSIX文件，用wget下载到本地。<br>一样是右键需要下载的包复制下载链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://github.com/microsoft/vscode-python/releases/download/2020.11.371526539/ms-python-release.vsix</span><br></pre></td></tr></table></figure>
-<p>然后再code-server的扩展中，用.vsix安装的方式把下载的包安装进去就好了</p>
-<h3 id="6-安装python3-7"><a href="#6-安装python3-7" class="headerlink" title="6.安装python3.7"></a>6.安装python3.7</h3><p>由于linux里自带的是Python2.7，一开始被缩进错误折磨了好久，后来安装了Python3.7之后就没有这方面的问题了</p>
-<p>首先 安装依赖库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel gcc</span><br></pre></td></tr></table></figure>
+<p>完成这步之后理论上是可以插入图片了，但是我还是出现错误</p>
+<img src="/2020/12/18/car/2.png" class title="图片失败">
+<p>网上查到要把\node_modules\hexo-asset-image\index.js的内容改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'use strict'</span>;</span><br><span class="line">var cheerio = require(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in<span class="_">-a</span>-string</span><br><span class="line"><span class="keyword">function</span> getPosition(str, m, i) &#123;</span><br><span class="line">  <span class="built_in">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version = String(hexo.version).split(<span class="string">'.'</span>);</span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="keyword">function</span>(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  <span class="keyword">if</span>(config.post_asset_folder)&#123;</span><br><span class="line">    	var link = data.permalink;</span><br><span class="line">	<span class="keyword">if</span>(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3)</span><br><span class="line">	   var beginPos = getPosition(link, <span class="string">'/'</span>, 1) + 1;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	   var beginPos = getPosition(link, <span class="string">'/'</span>, 3) + 1;</span><br><span class="line">	// In hexo 3.1.1, the permalink of <span class="string">"about"</span> page is like <span class="string">".../about/index.html"</span>.</span><br><span class="line">	var endPos = link.lastIndexOf(<span class="string">'/'</span>) + 1;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess = [<span class="string">'excerpt'</span>, <span class="string">'more'</span>, <span class="string">'content'</span>];</span><br><span class="line">    <span class="keyword">for</span>(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">'img'</span>).each(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">		<span class="keyword">if</span> ($(this).attr(<span class="string">'src'</span>))&#123;</span><br><span class="line">			// For windows style path, we replace <span class="string">'\'</span> to <span class="string">'/'</span>.</span><br><span class="line">			var src = $(this).attr(<span class="string">'src'</span>).replace(<span class="string">'\\'</span>, <span class="string">'/'</span>);</span><br><span class="line">			<span class="keyword">if</span>(!/http[s]*.*|\/\/.*/.<span class="built_in">test</span>(src) &amp;&amp;</span><br><span class="line">			   !/^\s*\//.<span class="built_in">test</span>(src)) &#123;</span><br><span class="line">			  // For <span class="string">"about"</span> page, the first part of <span class="string">"src"</span> can<span class="string">'t be removed.</span></span><br><span class="line"><span class="string">			  // In addition, to support multi-level local directory.</span></span><br><span class="line"><span class="string">			  var linkArray = link.split('</span>/<span class="string">').filter(function(elem)&#123;</span></span><br><span class="line"><span class="string">				return elem != '</span><span class="string">';</span></span><br><span class="line"><span class="string">			  &#125;);</span></span><br><span class="line"><span class="string">			  var srcArray = src.split('</span>/<span class="string">').filter(function(elem)&#123;</span></span><br><span class="line"><span class="string">				return elem != '</span><span class="string">' &amp;&amp; elem != '</span>.<span class="string">';</span></span><br><span class="line"><span class="string">			  &#125;);</span></span><br><span class="line"><span class="string">			  if(srcArray.length &gt; 1)</span></span><br><span class="line"><span class="string">				srcArray.shift();</span></span><br><span class="line"><span class="string">			  src = srcArray.join('</span>/<span class="string">');</span></span><br><span class="line"><span class="string">			  $(this).attr('</span>src<span class="string">', config.root + link + src);</span></span><br><span class="line"><span class="string">			  console.info&amp;&amp;console.info("update link as:--&gt;"+config.root + link + src);</span></span><br><span class="line"><span class="string">			&#125;</span></span><br><span class="line"><span class="string">		&#125;else&#123;</span></span><br><span class="line"><span class="string">			console.info&amp;&amp;console.info("no src attr, skipped...");</span></span><br><span class="line"><span class="string">			console.info&amp;&amp;console.info($(this));</span></span><br><span class="line"><span class="string">		&#125;</span></span><br><span class="line"><span class="string">      &#125;);</span></span><br><span class="line"><span class="string">      data[key] = $.html();</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
 
-<p>然后是 下载Python3.7源码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz</span><br><span class="line"></span><br><span class="line">$ tar -xvf Python-3.7.1.tar.xz &amp;&amp; <span class="built_in">cd</span> Python-3.7.1/</span><br></pre></td></tr></table></figure>
+<p>改完之后使用指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 图片名字.图片后缀 图片说明 %&#125;</span><br></pre></td></tr></table></figure>
+<p>就能插入照片了</p>
+<p>只要新建新的文章，系统会自动在_posts下新建对应的文件夹，把图片全放进去然后引用就好了</p>
+<img src="/2020/12/18/car/4.png" class title="文件夹">
+<img src="/2020/12/18/car/5.png" class title="路径">
+<img src="/2020/12/18/car/6.png" class title="代码">
+<img src="/2020/12/18/car/DSC01169.jpg" class title="车">
 
-<p>接着是 执行配置文件、编译、编译安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ./configure --prefix=/usr/<span class="built_in">local</span>/python37</span><br><span class="line"></span><br><span class="line">$ make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>安装完成没有提示错误就证明安装成功了</p>
-<p>最后是 建立软连接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mv /usr/bin/python /usr/bin/python_bak</span><br><span class="line"></span><br><span class="line">$ ln -s /usr/<span class="built_in">local</span>/python37/bin/python3.7 /usr/bin/python</span><br><span class="line"></span><br><span class="line">$ ln -s /usr/<span class="built_in">local</span>/python37/bin/pip3.7 /usr/bin/pip</span><br></pre></td></tr></table></figure>
-
-<p>测试Python是否可用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ python</span><br><span class="line"><span class="comment">#结果:</span></span><br><span class="line">Python 3.7.1 (default, Dec  9 2020, 17:26:39) </span><br><span class="line">[GCC 4.8.5 20150623 (Red Hat 4.8.5-44)] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">#结果</span></span><br><span class="line">hello</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;<span class="built_in">exit</span>()</span><br><span class="line"></span><br><span class="line">$ pip --version</span><br><span class="line"><span class="comment">#结果:</span></span><br><span class="line">pip 10.0.1 from /usr/<span class="built_in">local</span>/python37/lib/python3.7/site-packages/pip (python 3.7)</span><br></pre></td></tr></table></figure>
-
-<p><em>注</em><br>安装完可能会导致yum不能用，报错：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  File <span class="string">"/usr/bin/yum"</span>, line 30</span><br><span class="line">    except KeyboardInterrupt, e:</span><br><span class="line">                            ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
-<p>解决办法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vi /usr/bin/yum</span><br><span class="line">$ vi /usr/libexec/urlgrabber-ext-down</span><br><span class="line"><span class="comment">#讲两个文件的第一行"#!/usr/bin/python" 改为 "#!/usr/bin/python2.7"即可。</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>在线ide code-server运行起来过程中踩到的坑及解决方法<br><a href="https://blog.csdn.net/zju_cf/article/details/102765085" target="_blank" rel="noopener">https://blog.csdn.net/zju_cf/article/details/102765085</a><br>为 iPad 部署基于 VS Code 的远程开发环境<br><a href="https://sspai.com/post/60456" target="_blank" rel="noopener">https://sspai.com/post/60456</a><br>Code Server – VSCODE 服务器版<br><a href="https://zhuanlan.zhihu.com/p/62570740" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/62570740</a><br>code-server详细安装<br><a href="https://blog.csdn.net/qq_44891434/article/details/107450901" target="_blank" rel="noopener">https://blog.csdn.net/qq_44891434/article/details/107450901</a><br>nodejs程序后台一直运行<br><a href="https://blog.csdn.net/mochong/article/details/67636553" target="_blank" rel="noopener">https://blog.csdn.net/mochong/article/details/67636553</a><br>Linux服务器安装Python3.7<br><a href="https://www.cnblogs.com/tangda/p/14096996.html#autoid-0-0-0" target="_blank" rel="noopener">https://www.cnblogs.com/tangda/p/14096996.html#autoid-0-0-0</a><br>云端VSCode：code-server<br><a href="https://blog.csdn.net/dylan1998/article/details/108847545" target="_blank" rel="noopener">https://blog.csdn.net/dylan1998/article/details/108847545</a></p>
+<p>*为啥图片居中啊</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>hexo引用本地图片无法显示<br><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a><br>【Hexo】hexo在文章中添加图片<br><a href="https://blog.csdn.net/u010996565/article/details/89196612" target="_blank" rel="noopener">https://blog.csdn.net/u010996565/article/details/89196612</a></p>
 
       
       <!-- reward -->
@@ -206,7 +192,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/12/09/%E5%AE%89%E8%A3%85Code_server%E4%B8%BAipad%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/12/18/car/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -222,19 +208,10 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/12/18/car/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            hexo图片插件
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/11/26/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E4%B8%8A%E4%BC%A0%E8%87%B3%E4%BA%91%E7%AB%AF/" class="article-nav-link">
+      <a href="/2020/12/09/%E5%AE%89%E8%A3%85Code_server%E4%B8%BAipad%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">个人网站的创建与上传至云端</div>
+        <div class="article-nav-title">安装Code_server为ipad提高生产力</div>
       </a>
     
   </nav>
